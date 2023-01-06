@@ -1,0 +1,62 @@
+{
+    "key.run-module": [
+        "Command-R", 
+        "<Command-r>"
+    ],
+    "key.run-debug": [
+        "Command-Alt-R", 
+        "<Command-Shift-r>"
+    ],
+    "key.save-as-file": [
+        "Command-Alt-S", 
+        "<Command-Shift-s>"
+    ],
+    "key.save-file": [
+        "Command-S", 
+        "<Command-s>"
+    ],
+    "key.open-dir": [
+        "Command-Alt-O", 
+        "<Command-Shift-o>"
+    ],
+    "key.open-file": [
+        "Command-O", 
+        "<Command-o>"
+    ],
+    "key.new-file": [
+        "Command-N",
+        "<Command-n>"
+    ],
+    "key.new-saved-file": [
+        "Command-Alt-N", 
+        "<Command-Alt-n>"
+    ],
+    "key.virtual": [
+        "Command-Alt-V", 
+        "<Command-Alt-v>"
+    ],
+    "key.theme": [
+        "Command-Alt-T", 
+        "<Command-Alt-t>"
+    ],
+    "key.lang": [
+        "Command-Alt-L", 
+        "<Command-Alt-l>"
+    ],
+    "key.hotkeys": [
+        "Command-Alt-K", 
+        "<Command-Alt-k>"
+    ],
+    "key.settings": [
+        "Command-Alt-P", 
+        "<Command-Alt-p>"
+    ],
+    "key.run-clear": [
+        "Command-Alt-C", 
+        "<Command-Alt-c>"
+    ],
+    "key.pep": [
+        "Command-Alt-Shift-P", 
+        "<Command-Alt-Shift-P>"
+    ]
+}

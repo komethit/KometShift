@@ -1,0 +1,44 @@
+{
+    "name": "KometShift-Dark",
+    "window": {
+        "highlightthickness": 0,
+        "pad": [5, 5],
+        "ttk:style": "alt"
+    },
+    "background": {
+        "background": "#151515",
+        "subground": "#0f0f0f",
+        "background-select": "#2d2d2d"
+    },
+    "font": {
+        "font": "Menlo 12 normal",
+        "font-normal": "Ubuntu 12 normal",
+        "font-mini": "Ubuntu 10 normal"
+    },
+    "foreground": {
+        "foreground": "#7b7b7b",
+        "foreground-editor": "#daddde",
+        "foreground-gray": "#575757",
+        "foreground-linenumber": "#2d2d2d"
+    },
+    "select": {
+        "insert-width": 3,
+        "insert-color": "#ffffff",
+        "background-select": "#3e3e3e",
+        "foreground-select": "#ffffff"
+    },
+    "syntax": {
+        "COMMENT": {"foreground": "#5d8d50", "background": "#060805"},
+        "TYPES": {"foreground": "#7fd1bf", "background": "#0b1210"},
+        "NUMBER": {"foreground": "#9b4c4b", "background": "#1a0d0c"},
+        "BUILTIN": {"foreground": "#7fd1bf", "background": "#0b1210"},
+        "STRING": {"foreground": "#8779b4", "background": "#13111a"},
+        "DOCSTRING": {"foreground": "#75a8bd", "background": "#0f171a"},
+        "EXCEPTION": {"foreground": "#7fd1bf", "background": "#0b1210"},
+        "DEFINITION": {"foreground": "#cca36a", "background": "#14100a"},
+        "DECORATOR": {"foreground": "#cca36a", "background": "#14100a"},
+        "INSTANCE": {"foreground": "#75a8bd", "background": "#0f171a"},
+        "KEYWORD": {"foreground": "#75a8bd", "background": "#0f171a"},
+        "CLASSDEF": {"foreground": "#7fd1bf", "background": "#0b1210"}
+    }
+}

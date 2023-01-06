@@ -1,0 +1,42 @@
+{
+    "tools": {
+        "line": "Ln",
+        "col": "Col",
+        "lines": "Lns",
+        "wrap": "Wrap",
+        "space": "Spaces",
+        "title": "Title"
+    },
+    "dropdown": {
+        "packages-import": "Packages Import",
+        "new": "New File",
+        "open": "Open File",
+        "new-dir": "New Directory",
+        "copy-path": "Copy Path",
+        "delete": [
+            "Delete File",
+            "Delete Directory"
+        ],
+        "opendir": "Open Directory",
+        "save": "Save File",
+        "saveas": "Save As File",
+        "file-drop": "File",
+        "new-saved": "New Saved File",
+        "run": "Run Module",
+        "configurerun": "Configure Run",
+        "shell-drop": "Shell",
+        "virtual": "Virtualenv Create",
+        "preferences": "Preferences",
+        "settings": "Open Settings",
+        "theme": "Open Theme",
+        "hotkeys": "Open Hotkeys",
+        "lang": "Open Lang",
+        "packages": "Packages",
+        "clear": "Clear Terminal",
+        "pep": "Pep-8 Format"
+    },
+    "popups": {
+        "label-right": "The right part of the text of the information panel is responsible for the text labels and also the version of the application itself, the number of spaces and lines is also shown, and also the current line",
+        "label-left": "The left part of the information line shows the names of the assembly project and also the variable for transferring textat to the next line, also informative"
+    }
+}

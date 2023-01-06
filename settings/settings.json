@@ -1,0 +1,46 @@
+{
+    "window": {
+        "title": "KometShift",
+        "geometry": "860x520",
+        "modules": ["tkterminal, autopep8"],
+        "version": "23.01.06",
+        "minsize": [860, 520],
+        "resizable": [true, true]
+    },
+    "editor": {
+        "deafult-file-name": "Untiled",
+        "seporator-ns": "*",
+        "check-updates": true,
+        "auto-latest-save": true
+    },
+    "popup": {
+        "waittime": 500,
+        "wraplength": 180,
+        "popups": true
+    },
+    "treeview": {
+        "indent": 10,
+        "remove-tree-word": ".DS_Store"
+    },
+    "terminal": {
+       "shell": true,
+       "linebar": false,
+       "basename": "KometShift%"
+    },
+    "textarea": {
+        "highlight": true,
+        "wrap-mode": "none",
+        "autoindent": true,
+        "autoindentbracket": true,
+        "autoclosebracket": true,
+        "measure": "    ",
+        "measureCO": "4",
+        "brackets": {
+            "{": "}",
+            "(": ")", 
+            "\"": "\"", 
+            "'": "'", 
+            "[": "]"
+        }
+    }
+}
