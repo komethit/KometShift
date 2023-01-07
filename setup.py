@@ -9,6 +9,7 @@ from tools.latest import *  # <---- latest save and write script engine.
 # read the github documentation before starting.
 if __name__ == "__main__":
     window = Window()
+    print('Welcome to KometShift Applications!\nYou can read the documentation in https://github.com/komethit/KometShift')
     window.mainloop()
     if pref.editor["auto-latest-save"]:
         writeLatest(

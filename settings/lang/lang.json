@@ -8,6 +8,8 @@
         "title": "Title"
     },
     "dropdown": {
+        "undo": "Edit Undo",
+        "redo": "Edit Redo",
         "packages-import": "Packages Import",
         "new": "New File",
         "open": "Open File",
@@ -17,6 +19,7 @@
             "Delete File",
             "Delete Directory"
         ],
+        "edit-drop": "Edit",
         "opendir": "Open Directory",
         "save": "Save File",
         "saveas": "Save As File",
@@ -33,7 +36,9 @@
         "lang": "Open Lang",
         "packages": "Packages",
         "clear": "Clear Terminal",
-        "pep": "Pep-8 Format"
+        "pep": "Pep-8 Format",
+        "help": "help",
+        "about": "About KometShift"
     },
     "popups": {
         "label-right": "The right part of the text of the information panel is responsible for the text labels and also the version of the application itself, the number of spaces and lines is also shown, and also the current line",

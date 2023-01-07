@@ -1,7 +1,10 @@
 from tkinter import *
 from tkinter import scrolledtext
 from tkinter import filedialog
-import sys, json, os, time
+import sys
+import json
+import os
+import time
 from settings import *
 
 
@@ -70,18 +73,32 @@ class FilesUtil:
         self.terminal = treminal
         self.currentFilePath = pref.editor["deafult-file-name"]
         self.text.bind("<KeyPress>", self._textOnChanged)
-        
+
+    def about(self):
+        win = Toplevel(self.window)
+        win.configure(bg=theme.background['background'])
+        lbl1 = Label(
+            win,
+            font=theme.font['font'],
+            foreground=theme.foreground['foreground-gray'],
+            background=theme.background['background'],
+            text=f'Title - {pref.window["title"]}\nVersion - {pref.window["version"]}\nTheme - {theme.name}\nInterpretator - {run["hand-interpretator"]}\nModules - {pref.window["modules"]}')
+        lbl1.pack(padx=20, pady=20)
+        win.mainloop()
+
     def pep8format(self):
         try:
             if (
                 not self.currentFilePath == pref.editor["deafult-file-name"]
                 or self.currentFilePath == ""
             ):
-                self.terminal.run_command(f'autopep8 --in-place --aggressive --aggressive {self.currentFilePath}')
+                self.terminal.run_command(
+                    f'autopep8 --in-place --aggressive --aggressive {self.currentFilePath}')
                 self.openFilePath(self.currentFilePath)
             else:
                 self.saveSaveAS()
-        except: print('Module autopep8 is not installed! "pip install autopep8"')
+        except BaseException:
+            print('Module autopep8 is not installed! "pip install autopep8"')
 
     def openDirectory(self):
         dir = filedialog.askdirectory()
@@ -103,7 +120,7 @@ class FilesUtil:
             with open(file, "r") as f:
                 self.text.delete(1.0, END)
                 self.text.insert(INSERT, f.read())
-        except:
+        except BaseException:
             pass
 
     def openFilePath(self, path):
@@ -114,7 +131,7 @@ class FilesUtil:
             with open(file, "r") as f:
                 self.text.delete(1.0, END)
                 self.text.insert(INSERT, f.read())
-        except:
+        except BaseException:
             pass
 
     def runFile(self):
@@ -123,7 +140,8 @@ class FilesUtil:
             or self.currentFilePath == ""
         ):
             if run["auto-interpretator"]:
-                self.terminal.run_command(f"{sys.executable} {self.currentFilePath}")
+                self.terminal.run_command(
+                    f"{sys.executable} {self.currentFilePath}")
             else:
                 self.terminal.run_command(
                     f"{run['hand-interpretator']} {self.currentFilePath}"
@@ -144,7 +162,7 @@ class FilesUtil:
             with open(self.currentFilePath, "w") as f:
                 f.write(self.text.get("1.0", "end"))
             self.window.title(pref.window["title"])
-        except:
+        except BaseException:
             pass
 
     def saveSaveAS(self):
@@ -154,7 +172,7 @@ class FilesUtil:
             with open(self.currentFilePath, "w") as f:
                 f.write(self.text.get("1.0", "end"))
             self.window.title(pref.window["title"])
-        except:
+        except BaseException:
             pass
 
     def _textOnChanged(self, event):
@@ -172,5 +190,5 @@ class FilesUtil:
                 with open(self.currentFilePath, "r") as f:
                     self.text.delete(1.0, END)
                     self.text.insert(INSERT, f.read())
-        except:
+        except BaseException:
             pass

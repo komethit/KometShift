@@ -14,7 +14,9 @@ from custom.toolbar import *
 from custom.treeview import *
 from tools.utils import *
 from tools.latest import *
-import json, os, sys
+import json
+import os
+import sys
 
 
 class Window(Tk):
@@ -22,11 +24,14 @@ class Window(Tk):
         Tk.__init__(self, *args, **kwargs)
         self.geometry(pref.window["geometry"])
         self.title(pref.window["title"])
-        self.configure(background='#151515')
+        self.configure(background=theme.background['background'])
         self.minsize(pref.window["minsize"][0], pref.window["minsize"][1])
-        self.resizable(pref.window["resizable"][0], pref.window["resizable"][1])
+        self.resizable(
+            pref.window["resizable"][0],
+            pref.window["resizable"][1])
 
-        self.editorToolsFrame = ToolBar(self, background=theme.background["background"])
+        self.editorToolsFrame = ToolBar(
+            self, background=theme.background["background"])
         self.editorToolsFrame.pack(side=BOTTOM, fill=X, expand=False)
 
         self.editorTerminal = Terminal(
@@ -54,6 +59,7 @@ class Window(Tk):
             self.editorFrame,
             wrap=pref.textarea["wrap-mode"],
             font=theme.font["font"],
+            undo=pref.textarea['undo'],
             pady=theme.window["pad"][0],
             padx=theme.window["pad"][1],
             background=theme.background["background"],
@@ -92,7 +98,8 @@ class Window(Tk):
                 function=self.fu.openFilePath
             ),
         )
-        # self.bind("<Button-2>", lambda event: self.editorTreeview._openPopup(self.fu, event))
+        if pref.editor['betafunction-on'] == True:
+            self.bind("<Button-2>", lambda event: self.editorTreeview._openPopup(self.fu, event))
 
         self.editorTerminal.shell = pref.terminal["shell"]
         self.editorTerminal.basename = pref.terminal["basename"]
@@ -127,13 +134,16 @@ class Window(Tk):
             command=lambda: self.fu.newSavedFile(),
             accelerator=keys["key.new-saved-file"][0],
         )
-        self.bind(keys["key.new-saved-file"][1], lambda string: self.fu.newSavedFile)
+        self.bind(
+            keys["key.new-saved-file"][1],
+            lambda string: self.fu.newSavedFile)
         self.fileDropdown.add_command(
             label=lang["dropdown"]["open"],
             command=lambda: self.fu.openFileDialog(),
             accelerator=keys["key.open-file"][0],
         )
-        self.bind(keys["key.open-file"][1], lambda string: self.fu.openFileDialog())
+        self.bind(keys["key.open-file"][1],
+                  lambda string: self.fu.openFileDialog())
         self.fileDropdown.add_separator()
         self.fileDropdown.add_command(
             label=lang["dropdown"]["opendir"],
@@ -147,15 +157,40 @@ class Window(Tk):
             command=lambda: self.fu.saveSaveAS(),
             accelerator=keys["key.save-file"][0],
         )
-        self.bind(keys["key.save-file"][1], lambda string: self.fu.saveSaveAS())
+        self.bind(
+            keys["key.save-file"][1],
+            lambda string: self.fu.saveSaveAS())
         self.fileDropdown.add_command(
             label=lang["dropdown"]["saveas"],
             command=lambda: self.fu.saveSaveAS(),
             accelerator=keys["key.save-as-file"][0],
         )
-        self.bind(keys["key.save-as-file"][1], lambda string: self.fu.saveSaveAS())
+        self.bind(
+            keys["key.save-as-file"][1],
+            lambda string: self.fu.saveSaveAS())
         self.menuApplication.add_cascade(
             label=lang["dropdown"]["file-drop"], menu=self.fileDropdown
+        )
+        
+        self.editMenu = tk.Menu(self.menuApplication, tearoff=0)
+        self.editMenu.add_command(
+            label=lang["dropdown"]["undo"],
+            command=lambda: self.editorTextarea.edit_undo(),
+            accelerator=keys["key.undo"][0],
+        )
+        self.bind(
+            keys["key.undo"][1],
+            lambda string: self.editorTextarea.edit_undo())
+        self.editMenu.add_command(
+            label=lang["dropdown"]["redo"],
+            command=lambda: self.editorTextarea.edit_redo(),
+            accelerator=keys["key.redo"][0],
+        )
+        self.bind(
+            keys["key.redo"][1],
+            lambda string: self.editorTextarea.edit_redo())
+        self.menuApplication.add_cascade(
+            label=lang["dropdown"]["edit-drop"], menu=self.editMenu
         )
 
         self.prefMenu = tk.Menu(self.menuApplication, tearoff=0)
@@ -273,5 +308,13 @@ class Window(Tk):
         self.menuApplication.add_cascade(
             label=lang["dropdown"]["shell-drop"], menu=self.shellMenu
         )
+
+        self.helpMenu = tk.Menu(self.menuApplication, tearoff=0)
+        self.helpMenu.add_command(
+            label=lang["dropdown"]["about"],
+            command=lambda: self.fu.about()
+        )
+        self.menuApplication.add_cascade(
+            label=lang["dropdown"]["help"], menu=self.helpMenu)
 
         self.config(menu=self.menuApplication)

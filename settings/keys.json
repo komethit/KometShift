@@ -58,5 +58,13 @@
     "key.pep": [
         "Command-Alt-Shift-P", 
         "<Command-Alt-Shift-P>"
+    ],
+    "key.undo": [
+        "Command-Z", 
+        "<Command-z>"
+    ],
+    "key.redo": [
+        "Command-Alt-Z", 
+        "<Command-Alt-z>" 
     ]
 }

@@ -14,7 +14,6 @@ class TreeManeger(ttk.Treeview):
         self.fileImage = PhotoImage(file="./assets/file.png")
         self.imageImage = PhotoImage(file="./assets/image.png")
         self.nodes = {}
-        ttk.Style(self).theme_use(theme.window["ttk:style"])
         ttk.Style(self).map(
             "Treeview",
             background=[("selected", theme.background["background-select"])],
