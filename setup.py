@@ -1,20 +1,18 @@
-# %%    UTF-8    %%
-# %%    author - KometHit, ButterSus    %%
-from app import Window  # <---- main python engine script.
-from settings import *  # <---- settings json import.
-from tools.latest import *  # <---- latest save and write script engine.
+from settings import prefs
+from app import App
+from utils.client.versioncheck import checkversionyes
+from tkinter import messagebox
 
-# see the modules that you need to download for the application to work.
-# run this script to start the program.
-# read the github documentation before starting.
-if __name__ == "__main__":
-    window = Window()
-    print('Welcome to KometShift Applications!\nYou can read the documentation in https://github.com/komethit/KometShift')
+def main():
+    window = App()
+    window.geometry(prefs['editor']['window']['geometry'])
+    window.title(prefs['editor']['window']['title'])
+    window.resizable(prefs['editor']['window']['resizable'], prefs['editor']['window']['resizable'])
+    window.minsize(prefs['editor']['window']['minimizable'][0], prefs['editor']['window']['minimizable'][1])
     window.mainloop()
-    if pref.editor["auto-latest-save"]:
-        writeLatest(
-            {
-                "directory": window.editorTreeview.currentdirpath,
-                "file": window.fu.currentFilePath,
-            }
-        )
+
+if __name__ == "__main__":
+    if checkversionyes():main()
+    else:
+        if messagebox.askquestion('Version', 'New version, do you want to download?') == 'yes': pass
+        else:main()

@@ -1,48 +1,105 @@
 {
-    "window": {
-        "title": "KometShift",
-        "geometry": "860x520+300+120",
-        "modules": ["tkterminal, autopep8"],
-        "version": "23.07.01",
-        "minsize": [860, 520],
-        "resizable": [true, true]
-    },
+    "current-lang": "python",
     "editor": {
-        "deafult-file-name": "Untiled",
-        "seporator-ns": "*",
-        "check-updates": true,
-        "betafunction-on": false,
-        "auto-latest-save": true
-    },
-    "popup": {
-        "waittime": 500,
-        "wraplength": 180,
-        "popups": true
-    },
-    "treeview": {
-        "indent": 10,
-        "remove-tree-word": ".DS_Store"
-    },
-    "terminal": {
-       "shell": true,
-       "linebar": false,
-       "basename": "KometShift%"
-    },
-    "textarea": {
-        "undo": true,
-        "highlight": true,
-        "wrap-mode": "none",
-        "autoindent": true,
-        "autoindentbracket": true,
-        "autoclosebracket": true,
-        "measure": "    ",
-        "measureCO": "4",
-        "brackets": {
-            "{": "}",
-            "(": ")", 
-            "\"": "\"", 
-            "'": "'", 
-            "[": "]"
+        "file": {
+            "deafult": "New File",
+            "seporator-ns": "*"
+        },
+        "window": {
+            "geometry": "880x540",
+            "title": "KometShift",
+            "version": "23.18.01",
+            "resizable": true,
+            "popups": true,
+            "minimizable": [880, 540]
+        },
+        "markdown": {
+            "width": 30,
+            "display": {
+                "expand": true,
+                "fill": "both",
+                "side": "left"
+            },
+            "editor": {
+                "expand": true,
+                "fill": "both",
+                "side": "left"
+            }
+        },
+        "recentfile": true,
+        "recentfile-widget": {
+            "side": "left",
+            "fill": "y",
+            "expand": false
+        },
+        "terminal": true,
+        "terminal-widget": {
+            "shell": true,
+            "basename": "KometShift $",
+            "linebar": false,
+            "side": "bottom",
+            "fill": "x",
+            "expand": false
+        },
+        "linebar": true,
+        "linebar-widget": {
+            "side": "left",
+            "fill": "y",
+            "expand": false
+        },
+        "minimap": false,
+        "minimap-widget": {
+            "side": "left",
+            "fill": "y",
+            "expand": false
+        },
+        "toolbar": true,
+        "toolbar-widget": {
+            "side": "bottom",
+            "fill": "x",
+            "expand": false
+        },
+        "treeview": true,
+        "treeview-widget": {
+            "side": "left",
+            "fill": "y",
+            "expand": false,
+            "indent": 10,
+            "remove-tree-word": ".DS_Store",
+            "spec-folder": [
+                "assets",
+                "venv",
+                "utils",
+                "code",
+                "source",
+                "modules",
+                "packages",
+                "local",
+                "server"
+            ]
+        },
+        "textarea": true,
+        "textarea-widget": {
+            "side": "left",
+            "fill": "both",
+            "expand": true,
+            "wrap": "none",
+            "measureCO": 4,
+            "indent-return": true,
+            "indent-bracket": true,
+            "indent-closebracket": true,
+            "matches": {
+                "{": "}", 
+                "<": ">",
+                "[": "]",
+                "(": ")",
+                "'": "'",
+                "\"": "\""
+            }
+        },
+        "popup": {
+            "waittime": 500,
+            "wraplength": 180
         }
     }
 }

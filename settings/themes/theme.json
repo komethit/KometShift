@@ -1,0 +1,94 @@
+{
+    "editor": {
+        "widgets": {
+            "background": "#31343e",
+            "subground": "#262931",
+            "background-hover": "#343947",
+            "background-select": "#343947"
+        },
+        "text": {
+            "foreground": "#f3f5f7",
+            "foreground-gray": "#787b88",
+            "foreground-select": "#63d8aa",
+            "font": {
+                "font-normal-mini": "Ubuntu 10 normal",
+                "font-editor": "Monosapce 11 normal",
+                "font-italic": "Monosapce 11 italic",
+                "font-normal": "Ubuntu 11 normal",
+                "font-bold": "Ubuntu 11 bold",
+                "font-map": "Monospace 2 normal",
+                "font-editor-mini": "Monosapce 10 normal"
+            }
+        },
+        "config": {
+            "border": false,
+            "custom-styles": true,
+            "insert": {
+                "insert-color": "#ee6c4d",
+                "insert-width": 2
+            }
+        },
+        "widgets-config": {
+            "pad": [5, 5],
+            "linebar": {
+                "width": 35
+            },
+            "terminal": {
+                "error": "#d90429",
+                "basename": "#f3f5f7",
+                "output": "#f3f5f7"
+            },
+            "markdown": {
+                "h1Color": "#f3f5f7",
+                "h2Color": "#999db0",
+                "h3Color": "#787b88",
+                "codeColor": "#cca36a",
+                "linkColor": "#7fd1bf",
+                "normalSize": 11,
+                "h1Size": 28,
+                "h2Size": 20,
+                "h3Size": 16,
+                "editorfontName": "Monospace",
+                "displayFontName": "Ubuntu"
+            }
+        },
+        "syntax": {
+            "COMMENT": {
+                "foreground": "#5d8d50"
+            },
+            "TYPES": {
+                "foreground": "#7fd1bf"
+            },
+            "NUMBER": {
+                "foreground": "#9b4c4b"
+            },
+            "BUILTIN": {
+                "foreground": "#7fd1bf"
+            },
+            "STRING": {
+                "foreground": "#8779b4"
+            },
+            "DOCSTRING": {
+                "foreground": "#75a8bd"
+            },
+            "EXCEPTION": {
+                "foreground": "#7fd1bf"
+            },
+            "DEFINITION": {
+                "foreground": "#cca36a"
+            },
+            "DECORATOR": {
+                "foreground": "#cca36a"
+            },
+            "INSTANCE": {
+                "foreground": "#75a8bd"
+            },
+            "KEYWORD": {
+                "foreground": "#75a8bd"
+            },
+            "CLASSDEF": {
+                "foreground": "#7fd1bf"
+            }
+        }
+    }
+}

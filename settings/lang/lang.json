@@ -1,16 +1,17 @@
 {
+    "lang": "en",
     "tools": {
         "line": "Ln",
         "col": "Col",
         "lines": "Lns",
         "wrap": "Wrap",
         "space": "Spaces",
-        "title": "Title"
+        "title": "Name"
     },
     "dropdown": {
         "undo": "Edit Undo",
         "redo": "Edit Redo",
-        "packages-import": "Packages Import",
+        "packages-import": "Import Package",
         "new": "New File",
         "open": "Open File",
         "new-dir": "New Directory",
@@ -30,18 +31,27 @@
         "shell-drop": "Shell",
         "virtual": "Virtualenv Create",
         "preferences": "Preferences",
-        "settings": "Open Settings",
-        "theme": "Open Theme",
-        "hotkeys": "Open Hotkeys",
-        "lang": "Open Lang",
+        "settings": "Settings Config",
+        "theme": "Theme Config",
+        "hotkeys": "Hotkeys Config",
+        "lang": "Lang Config",
         "packages": "Packages",
         "clear": "Clear Terminal",
         "pep": "Pep-8 Format",
-        "help": "help",
-        "about": "About KometShift"
+        "help": "Help",
+        "about": "About KometShift",
+        "wiki": "Search Wikipedia",
+        "input": "Search in Wikipedia",
+        "built": "Built-In",
+        "mark": "MarkDown Editor",
+        "editor": "Code Editor"
     },
     "popups": {
         "label-right": "The right part of the text of the information panel is responsible for the text labels and also the version of the application itself, the number of spaces and lines is also shown, and also the current line",
         "label-left": "The left part of the information line shows the names of the assembly project and also the variable for transferring textat to the next line, also informative"
+    },
+    "widgets": {
+        "filemaneger": "File Maneger",
+        "recentfiles": "Recent Files"
     }
 }

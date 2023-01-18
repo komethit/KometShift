@@ -15,6 +15,14 @@
         "Command-S", 
         "<Command-s>"
     ],
+    "key.mark": [
+        "Command-M", 
+        "<Command-m>"
+    ],
+    "key.editor": [
+        "Command-E", 
+        "<Command-e>"
+    ],
     "key.open-dir": [
         "Command-Alt-O", 
         "<Command-Shift-o>"
@@ -66,5 +74,9 @@
     "key.redo": [
         "Command-Alt-Z", 
         "<Command-Alt-z>" 
+    ],
+    "key.wiki": [
+        "Command-Alt-W",
+        "<Command-Alt-w>"
     ]
 }

@@ -1,46 +1,64 @@
-# Welcome in KometShift
-A convenient code editor for editing files for Python, there is also a convenient system of packages and plugins for customizing the editor for yourself, or you can even create your own using the functions that are already included in applications from the box, there is also a convenient code launch system and an internal console.
+![Last commit](https://img.shields.io/github/last-commit/KometShiftKom/KometShift)
+![Python](https://img.shields.io/pypi/pyversions/autopep8)
+![License](https://img.shields.io/github/license/KometShiftKom/KometShift)
+![License](https://img.shields.io/github/languages/code-size/KometShiftKom/KometShift)
+# KometShift is Open Source
+## 23.18.01
+In the new version of KometShift, a lot of interesting and important things have been added, but unfortunately, built-in applications will not be in this update, but here is a list of all the new visions:
 
-![KometShift](./assets/git/git1.png  "KometShift")
+ - Application Bar menu is now in a separate file.
+ - Added version check.
+ - Plan drawing test system.
 
-# Version 23.07.01
-In the new version, we have a Help tab with information about the application version of the theme and more, as well as a menu for editing text, improving the package system, changing the textures of the application, and updating the file system updates to the README documentation adding instructions for Linux(Ubuntu).
+I will try my best to fix any mistakes and help you as much as possible.
 
-# Getting started
-## Linux
-What do you need to install:
+## KometShift
+KometShift it also the property of the creator, you can create your own versions with references to the creator and this repository or our website.
+![KometShift screenshot](./assets/private/pictures/app.png)
+KometShift is a handy tool for editing code, it is perfect for developing applications and debugging, it has a built-in list of packages for convenient work.
 
-1. Download the GitHub project to your device: ```$ git clone https://github.com/komethit/KometShift```
-2. Enter this directory: ```$ cd KometShift```
-3. Run the setup file: `python setup.py` command.
+KometShift is also configured for work, you can also download and make your own versions of this product.
 
-## Windows, MacOS
-What do you need to install:
+## Contributing
+There are many ways you can contact us, you can also help us   
+or report a bug or edit:
 
-1. Download the .zip archive of the project from github and upload it to your working folder.
-2. Start terminal and enter project folder: `cd <path>`.
-3. Run the setup file: `python setup.py` command.
+ - You can write to our social networks.
+ - You can write in our github forums or other platforms.
+ - You can send us an email.
+ 
+ You can also read the wiki and also learn something new about the field of application development and programming, also learn more about the project.
 
-> I advise you to use other editors to run the application After
-> installation, be sure to download the necessary modules (they are in
-> the *settings.json* file) and there the "modules" list is a list of the
-> necessary.
+## Bundled Extensions
+This product contains a lot of built-in packages for convenient work, they can also be turned on and off, as well as adding your own languages ​​​​for writing code and writing your own packages using easy `json` file syntax example of this is: `Russian-Language`, `Windows-Keyboard`, `Embedded-Applications`.
 
-# Requirements
-Install *Python* on your computer and also read the installation documentation below. Run on any platform using Python. Also, for stable operation of the application.
+## Development
+This project is very easy to learn, also writing your own functions and packages, you can also create your own version, to do this, you need to follow a few steps:
 
-*You need at least: 2gb RAM, 2 vCPUs.*
+ - Download this project to your device, also have downloaded `Python`
+   version `3.11` and higher, also have an idea about programming in
+   general.
+ - Also, download the required file via pip, namely `requirement.txt` and
+   paste one command into the command line `pip install -r
+   requirements.txt`.
+ - To launch applications via the command line, this is one command
+   python `setup.py `must already be in this directory beforehand: `cd
+   path`.
 
-# Tools
-Built-in developer console, convenient and easy settings, package system, multi-platform editing ability, syntax highlighting system, minor settings, also change the language, also the ability to create your own theme and integrate any language into the editor.
+> Also if you get `pip` error try `pip3` same with `python/python3`.
+  
+After these steps, you can simply and flexibly customize applications for yourself using the pact system, also customize the application code and write (add) your functions,    a simple example of writing your own package:
 
-A simple system for running Python code, as well as settings and viewing, many new features will be added to this function as the project becomes available.
+```json
+{
+    "manifest": "test-pack",
+    "state": true,
+    "run": {
+        "auto-interpretator": true,
+        "hand-interpretator": "usr/bin/python3"
+    }
+}
+```
 
 ## License
-KometShift uses an open license *GNU v3 License*.
-
-## Contribution
-If you are interested, please contact the author of the project among those available for communication.
-
-## Contact the author
-If you want to write to the creator or give advice on improving the code, you can write to this mail: **kometisgit@gmail.com**
+Licensed under the [MIT](https://github.com/KometShiftKom/KometShift/blob/main/LICENSE) license.

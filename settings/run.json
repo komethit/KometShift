@@ -1,0 +1,4 @@
+{
+    "auto-interpretator": true,
+    "hand-interpretator": "usr/bin/python3"
+}
