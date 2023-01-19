@@ -3,12 +3,14 @@
 ![License](https://img.shields.io/github/license/KometShiftKom/KometShift)
 ![License](https://img.shields.io/github/languages/code-size/KometShiftKom/KometShift)
 # KometShift is Open Source
-## 23.18.01
+## 23.19.01
 In the new version of KometShift, a lot of interesting and important things have been added, but unfortunately, built-in applications will not be in this update, but here is a list of all the new visions:
 
- - Application Bar menu is now in a separate file.
- - Added version check.
- - Plan drawing test system.
+ - Past repository commits were successful.
+ - Documentation updated.
+ - Wiki added.
+ - Bug fixes.
+ - Optimization.
 
 I will try my best to fix any mistakes and help you as much as possible.
 

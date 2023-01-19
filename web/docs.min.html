@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KometProject | Your Code</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/index.min.css">
+        <link rel="stylesheet" href="./styles/docs.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/prettify.css"></head>
+    <body>
+        <div class="top" style="position: absolute; top: 0px;"></div>
+        <header class="header">
+            <div class="header-content">
+                <span class="header-company-name">KometShift</span>
+                <div class="header-links">
+                    <a href="./index.min.html" class="header-link">Download</a>
+                    <a href="./index.min.html" class="header-link">Information</a>
+                    <a href="./docs.min.html" class="header-link">Docs</a>
+                </div>
+            </div>
+        </header>
+        <div class="docs">
+            <div class="docs-content">
+                <div class="docs-block">
+                    <h1 id="getting-started-with-komecode">Getting Started with KomeCode</h1>
+                    <p>In this section, I will show you and tell you all the most important things to get started, about downloading and setting up the application, as well as about building a project for your device.</p>
+                    <h2 id="installing">Installing</h2>
+                    <p>Downloading the project is very simple, all you need is 3 steps, after that you will be able to set up your project and your applications completely on your own or together with us, namely me, I&#39;m a Guide by the way, for installing we need:</p>
+                    <ul>
+                    <li>Installing the project requires downloading a <code>.zip</code> archive to your device.</li>
+                    <li>Go to the developer console and see <code>cd path-folder</code></li>
+                    <li>Enter this command <code>pip install -r requirements.txt</code> to download the necessary modules for the editor to work correctly.</li>
+                    </ul>
+                    <blockquote>
+                    <p>You must have <a href="https://www.python.org/download/releases/3.1/">Python version 3.1</a> installed on your device, you must also remember that this is <code>Python</code></p>
+                    </blockquote>
+                    <p>Congratulations, you have successfully downloaded our editor to your device!</p>
+                    <h2 id="launch-project">Launch Project</h2>
+                    <p>Starting a project is very simple, all you need to do is run one <code>Python</code> file. We are already in the directory, we will write <code>cd path-folder</code>, which means we can run a project that is configured for us, you just need to enter <code>python setup.py</code></p>
+                    <h2 id="build-project">Build Project</h2>
+                    <p>To build the project, you need to enter 2 commands, while <code>pyinstaller</code> should already be downloaded, here are the 2 commands themselves, along with downloading this module:</p>
+                    <pre><code>pip install pyinstaller
+
+pyinstaller -F <span class="hljs-built_in">setup</span>.py
+</code></pre><h2 id="settings-setup">Settings Setup</h2>
+                    <p>Setting up the project is very simple and at the same time difficult because the project has a lot of settings files, also language settings, you can change them and also create your own, namely packages, you also have to carefully look at the version of the package, each version has its own architecture, everything can change and be added, but it rarely leads to errors, because of our <code>Packet-Manager</code>, which edits everything for you.</p>
+                    <table>
+                    <thead>
+                    <tr>
+                    <th>Files name</th>
+                    <th>Function</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>theme.json</td>
+                    <td>Color Theme Customization File</td>
+                    </tr>
+                    <tr>
+                    <td>settings.json</td>
+                    <td>Main settings file</td>
+                    </tr>
+                    <tr>
+                    <td>keys.json</td>
+                    <td>Customizing application hotkeys</td>
+                    </tr>
+                    <tr>
+                    <td>debug.json</td>
+                    <td>Code Run Setting</td>
+                    </tr>
+                    <tr>
+                    <td>lang.json</td>
+                    <td>Language settings</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div class="docs-block">
+                    <h1 id="packages-system">Packages System</h1>
+                    <p>The package system of the project is very simple, and most often used in the import of settings, for this, the <code>packages</code> folder stores .json files of the packages themselves and also many folders with API and other packages, you can also create your own package using a <code>.json</code> file or folder.</p>
+                    <h2 id="create-package">Create Package</h2>
+                    <p>Creating the first package is very cool, you can post it on our site on the site, or communities with your friends, and you can also use them absolutely free, to create the first package you need to fill in the data:</p>
+                    <table>
+                    <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>manifest</td>
+                    <td>Package names</td>
+                    </tr>
+                    <tr>
+                    <td>version</td>
+                    <td>Package application version</td>
+                    </tr>
+                    <tr>
+                    <td>description</td>
+                    <td>Package descriptions</td>
+                    </tr>
+                    <tr>
+                    <td>author</td>
+                    <td>Package author</td>
+                    </tr>
+                    <tr>
+                    <td>components</td>
+                    <td>Package Components</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <p>A simple package example:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">"manifest"</span>: <span class="hljs-string">"test-package"</span>,
+    <span class="hljs-string">"version"</span>: <span class="hljs-string">"xx.xx.xx.y"</span>,
+    <span class="hljs-string">"description"</span>: <span class="hljs-string">"I dont know((("</span>,
+    <span class="hljs-string">"author"</span>: <span class="hljs-string">"IDKinc"</span>,
+    <span class="hljs-string">"components"</span>: {
+        <span class="hljs-string">"debug"</span>: {
+            ...
+        },
+        <span class="hljs-string">"settings"</span>: {
+            ...
+        }
+    }
+}</code></pre>
+                    <h2 id="launch-package">Launch Package</h2>
+                    <p>To run the package, you just need to transfer it to the packages folder and it will work, also check for errors and also the application version of the package.</p>
+
+                </div>
+                <div class="docs-block">
+                    <h1 id="server">Server</h1>
+                    <p>The application also has a server where you can very easily and simply replace, of which this is the server for the version where the version is checked and the new one is also downloaded, and the second where all <code>.json</code> files with packages are stored.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

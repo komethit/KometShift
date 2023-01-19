@@ -1,0 +1,2 @@
+# Server
+The application also has a server where you can very easily and simply replace, of which this is the server for the version where the version is checked and the new one is also downloaded, and the second where all `.json` files with packages are stored.
