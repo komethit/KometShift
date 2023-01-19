@@ -1,7 +1,7 @@
-![Last commit](https://img.shields.io/github/last-commit/KometShiftKom/KometShift)
+![Last commit](https://img.shields.io/github/last-commit/komethit/KometShift)
 ![Python](https://img.shields.io/pypi/pyversions/autopep8)
-![License](https://img.shields.io/github/license/KometShiftKom/KometShift)
-![License](https://img.shields.io/github/languages/code-size/KometShiftKom/KometShift)
+![License](https://img.shields.io/github/license/komethit/KometShift)
+![License](https://img.shields.io/github/languages/code-size/komethit/KometShift)
 # KometShift is Open Source
 ## 23.19.01
 In the new version of KometShift, a lot of interesting and important things have been added, but unfortunately, built-in applications will not be in this update, but here is a list of all the new visions:
