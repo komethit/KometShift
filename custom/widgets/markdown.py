@@ -64,19 +64,19 @@ class MarkDownEditorWidget(Frame):
             [
                 '(#{1}\s)(.*)',
                 'Header 1',
-                f'{self.displayFontName} {self.h1Size}', 
+                f'{self.displayFontName} {self.h1Size} bold', 
                 self.h1Color,
                 0
             ], [
                 '(#{2}\s)(.*)',
                 'Header 2', 
-                f'{self.displayFontName} {self.h2Size}',
+                f'{self.displayFontName} {self.h2Size} bold',
                 self.h2Color,
                 0
             ], [
                 '(#{3}\s)(.*)', 
                 'Header 3', 
-                f'{self.displayFontName} {self.h3Size}', 
+                f'{self.displayFontName} {self.h3Size} bold', 
                 self.h3Color,
                 0        
             ], [

@@ -16,6 +16,7 @@ class TreeManeger(ttk.Treeview):
         self.jsonImage = PhotoImage(file="./assets/public/bracket.png")
         self.fileImage = PhotoImage(file="./assets/public/file.png")
         self.imageImage = PhotoImage(file="./assets/public/image.png")
+        self.kiwiImage = PhotoImage(file="./assets/public/kiwi.png")
         self.nodes = {}
         self.currentdirpath = "."
         self.heading('#0', text=lang['widgets']['filemaneger'])
@@ -105,15 +106,19 @@ class TreeManeger(ttk.Treeview):
                     node = self.insert(
                         parent, "end", text=text, open=False, image=self.folderImage
                     )
-            elif os.path.splitext(abspath)[-1] == ".py":
+            elif os.path.splitext(abspath)[-1] == ".py" or os.path.splitext(abspath)[-1] == '.pyc':
                 node = self.insert(
                     parent, "end", text=text, open=False, image=self.pythonImage
                 )
-            elif os.path.splitext(abspath)[-1] == ".json":
+            elif os.path.splitext(abspath)[-1] == ".kiwi":
+                node = self.insert(
+                    parent, "end", text=text, open=False, image=self.kiwiImage
+                )
+            elif os.path.splitext(abspath)[-1] == ".json" or os.path.splitext(abspath)[-1] == ".ini":
                 node = self.insert(
                     parent, "end", text=text, open=False, image=self.jsonImage
                 )
-            elif os.path.splitext(abspath)[-1] == ".png":
+            elif os.path.splitext(abspath)[-1] == ".png" or os.path.splitext(abspath)[-1] == ".jpg" or os.path.splitext(abspath)[-1] == ".svg":
                 node = self.insert(
                     parent, "end", text=text, open=False, image=self.imageImage
                 )

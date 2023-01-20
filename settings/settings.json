@@ -1,5 +1,6 @@
 {
-    "current-lang": "python",
+    "current-lang": "py",
+    "langs-help": ["py", "kiwi"],
     "editor": {
         "file": {
             "deafult": "New File",
@@ -8,7 +9,7 @@
         "window": {
             "geometry": "880x540",
             "title": "KometShift",
-            "version": "23.18.01",
+            "version": "23.19.01",
             "resizable": true,
             "popups": true,
             "minimizable": [880, 540]

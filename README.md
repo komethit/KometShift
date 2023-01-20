@@ -3,14 +3,14 @@
 ![License](https://img.shields.io/github/license/komethit/KometShift)
 ![License](https://img.shields.io/github/languages/code-size/komethit/KometShift)
 # KometShift is Open Source
-## 23.19.01
+## 23.20.01
 In the new version of KometShift, a lot of interesting and important things have been added, but unfortunately, built-in applications will not be in this update, but here is a list of all the new visions:
 
- - Past repository commits were successful.
+ - Adding Kiwi language support.
  - Documentation updated.
- - Wiki added.
+ - Highlighting System Updates.
  - Bug fixes.
- - Optimization.
+ - Package system has been updated.
 
 I will try my best to fix any mistakes and help you as much as possible.
 

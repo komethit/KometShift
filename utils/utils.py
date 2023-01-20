@@ -1,8 +1,9 @@
 from tkinter import *
 from tkinter import scrolledtext
 from tkinter import filedialog
-import sys
+import sys, os
 from settings import *
+from syntax.highlight import SyntaxHighlightUtil, read
 
 
 class CreateToolTip(object):

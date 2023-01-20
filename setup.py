@@ -1,10 +1,12 @@
 from settings import prefs
 from app import App
 from utils.client.versioncheck import checkversionyes
+from PIL import Image, ImageTk
 from tkinter import messagebox
 
 def main():
     window = App()
+    window.wm_iconphoto(False, ImageTk.PhotoImage(Image.open('./favicon.ico')))
     window.geometry(prefs['editor']['window']['geometry'])
     window.title(prefs['editor']['window']['title'])
     window.resizable(prefs['editor']['window']['resizable'], prefs['editor']['window']['resizable'])

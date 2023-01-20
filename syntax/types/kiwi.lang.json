@@ -1,0 +1,50 @@
+{
+    "keyword": {
+        "regex": "\\b(?P<KEYWORD>animal|tick|function|scoreboard|return|if|is|name|promise|print)\\b",
+        "description": "keywords"
+    },
+    "exception": {
+        "regex": "([^.'\\\"\\\\#]\\b|^)(?P<EXCEPTION>main)\\b",
+        "description": "exceptions"
+    },
+    "builtin": {
+        "regex": "([^.'\\\"\\\\#]\\b|^)(?P<BUILTIN>player|mob_kills|killed|killed_animal|My|kills)\\b",
+        "description": "builtins"
+    },
+    "docstring": {
+        "regex": "(?P<DOCSTRING>(?i:r|u|f|fr|rf|b|br|rb)?'''[^'\\\\]*((\\\\.|'(?!''))[^'\\\\]*)*(''')?|(?i:r|u|f|fr|rf|b|br|rb)?\\\"\\\"\\\"[^\\\"\\\\]*((\\\\.|\\\"(?!\\\"\\\"))[^\\\"\\\\]*)*(\\\"\\\"\\\")?)",
+        "description": "docstring"
+    },
+    "string": {
+        "regex": "(?P<STRING>(?i:r|u|f|fr|rf|b|br|rb)?'[^'\\\\\\n]*(\\\\.[^'\\\\\\n]*)*'?|(?i:r|u|f|fr|rf|b|br|rb)?\\\"[^\\\"\\\\\\n]*(\\\\.[^\\\"\\\\\\n]*)*\\\"?)",
+        "description": "string"
+    },
+    "types": {
+        "regex": "\\b(?P<TYPES>poor)\\b",
+        "description": "types"
+    },
+    "number": {
+        "regex": "\\b(?P<NUMBER>((0x|0b|0o|#)[\\da-fA-F]+)|((\\d*\\.)?\\d+))\\b",
+        "description": "numbers"
+    },
+    "classdef": {
+        "regex": "(?<=\\bclass)[ \\t]+(?P<CLASSDEF>\\w+)[ \\t]*[:\\(]",
+        "description": "."
+    },
+    "decorator": {
+        "regex": "(^[ \\t]*(?P<DECORATOR>@[\\w\\d\\.]+))",
+        "description": "."
+    },
+    "instance": {
+        "regex": "\\b(?P<INSTANCE>selector)\\b",
+        "description": "."
+    },
+    "comment": {
+        "regex": "(?P<COMMENT>#[^\\n]*)",
+        "description": "."
+    },
+    "sync": {
+        "regex": "(?P<SYNC>\\n)",
+        "description": "."
+    }
+}

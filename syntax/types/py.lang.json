@@ -1,0 +1,50 @@
+{
+    "keyword": {
+        "regex": "\\b(?P<KEYWORD>False|None|True|and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield)\\b",
+        "description": "keywords"
+    },
+    "exception": {
+        "regex": "([^.'\\\"\\\\#]\\b|^)(?P<EXCEPTION>ArithmeticError|AssertionError|AttributeError|BaseException|BlockingIOError|BrokenPipeError|BufferError|BytesWarning|ChildProcessError|ConnectionAbortedError|ConnectionError|ConnectionRefusedError|ConnectionResetError|DeprecationWarning|EOFError|Ellipsis|EnvironmentError|Exception|FileExistsError|FileNotFoundError|FloatingPointError|FutureWarning|GeneratorExit|IOError|ImportError|ImportWarning|IndentationError|IndexError|InterruptedError|IsADirectoryError|KeyError|KeyboardInterrupt|LookupError|MemoryError|ModuleNotFoundError|NameError|NotADirectoryError|NotImplemented|NotImplementedError|OSError|OverflowError|PendingDeprecationWarning|PermissionError|ProcessLookupError|RecursionError|ReferenceError|ResourceWarning|RuntimeError|RuntimeWarning|StopAsyncIteration|StopIteration|SyntaxError|SyntaxWarning|SystemError|SystemExit|TabError|TimeoutError|TypeError|UnboundLocalError|UnicodeDecodeError|UnicodeEncodeError|UnicodeError|UnicodeTranslateError|UnicodeWarning|UserWarning|ValueError|Warning|WindowsError|ZeroDivisionError)\\b",
+        "description": "exceptions"
+    },
+    "builtin": {
+        "regex": "([^.'\\\"\\\\#]\\b|^)(?P<BUILTIN>abs|all|any|ascii|bin|breakpoint|callable|chr|classmethod|compile|complex|copyright|credits|delattr|dir|divmod|enumerate|eval|exec|exit|filter|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|isinstance|issubclass|iter|len|license|locals|map|max|memoryview|min|next|oct|open|ord|pow|print|quit|range|repr|reversed|round|set|setattr|slice|sorted|staticmethod|sum|type|vars|zip)\\b",
+        "description": "builtins"
+    },
+    "docstring": {
+        "regex": "(?P<DOCSTRING>(?i:r|u|f|fr|rf|b|br|rb)?'''[^'\\\\]*((\\\\.|'(?!''))[^'\\\\]*)*(''')?|(?i:r|u|f|fr|rf|b|br|rb)?\\\"\\\"\\\"[^\\\"\\\\]*((\\\\.|\\\"(?!\\\"\\\"))[^\\\"\\\\]*)*(\\\"\\\"\\\")?)",
+        "description": "docstring"
+    },
+    "string": {
+        "regex": "(?P<STRING>(?i:r|u|f|fr|rf|b|br|rb)?'[^'\\\\\\n]*(\\\\.[^'\\\\\\n]*)*'?|(?i:r|u|f|fr|rf|b|br|rb)?\\\"[^\\\"\\\\\\n]*(\\\\.[^\\\"\\\\\\n]*)*\\\"?)",
+        "description": "string"
+    },
+    "types": {
+        "regex": "\\b(?P<TYPES>bool|bytearray|bytes|dict|float|int|list|str|tuple|object)\\b",
+        "description": "types"
+    },
+    "number": {
+        "regex": "\\b(?P<NUMBER>((0x|0b|0o|#)[\\da-fA-F]+)|((\\d*\\.)?\\d+))\\b",
+        "description": "numbers"
+    },
+    "classdef": {
+        "regex": "(?<=\\bclass)[ \\t]+(?P<CLASSDEF>\\w+)[ \\t]*[:\\(]",
+        "description": "."
+    },
+    "decorator": {
+        "regex": "(^[ \\t]*(?P<DECORATOR>@[\\w\\d\\.]+))",
+        "description": "."
+    },
+    "instance": {
+        "regex": "\\b(?P<INSTANCE>super|self|cls)\\b",
+        "description": "."
+    },
+    "comment": {
+        "regex": "(?P<COMMENT>#[^\\n]*)",
+        "description": "."
+    },
+    "sync": {
+        "regex": "(?P<SYNC>\\n)",
+        "description": "."
+    }
+}

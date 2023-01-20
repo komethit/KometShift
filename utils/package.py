@@ -12,24 +12,25 @@ class Packages:
         try:
             for (dirpath, dirnames, filenames) in os.walk("./packages/"):
                 for filename in filenames:
+                    print(filename)
                     with open(f"./packages/{filename}", "r") as file:
                         stock = json.load(file)
                         if stock["state"]:
-                            if "lang" in stock:
+                            if "lang" in stock['components']:
                                 with open("./settings/lang/lang.json", "w") as file2:
-                                    json.dump(stock["lang"], file2, indent=4)
-                            elif "theme" in stock:
+                                    json.dump(stock['components']["lang"], file2, indent=4)
+                            elif "theme" in stock['components']:
                                 with open("./settings/themes/theme.json", "w") as file2:
-                                    json.dump(stock["theme"], file2, indent=4)
-                            elif "run" in stock:
+                                    json.dump(stock['components']["theme"], file2, indent=4)
+                            elif "debug" in stock['components']:
                                 with open("./settings/run.json", "w") as file2:
-                                    json.dump(stock["run"], file2, indent=4)
-                            elif "settings" in stock:
+                                    json.dump(stock['components']["debug"], file2, indent=4)
+                            elif "settings" in stock['components']:
                                 with open("./settings/settings.json", "a") as file2:
-                                    json.dump(stock["settings"], file2, indent=4)
-                            elif "keys" in stock:
+                                    json.dump(stock['components']["settings"], file2, indent=4)
+                            elif "keys" in stock['components']:
                                 with open("./settings/keys.json", "w") as file2:
-                                    json.dump(stock["keys"], file2, indent=4)
+                                    json.dump(stock['components']["keys"], file2, indent=4)
                             else:
                                 print(
                                     f'Avalible name of package!; {stock["manifest"]}')
@@ -43,8 +44,8 @@ class Packages:
                             label=stock["manifest"],
                             state=tk.DISABLED
                         )
-        except IndexError:
-            pass
+        except IndexError: pass
+        except FileNotFoundError: pass
 
     def importPackage(self):
         try:

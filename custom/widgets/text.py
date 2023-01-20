@@ -3,11 +3,17 @@ from settings import prefs, theme
 import re
 import tkinter.font as tkfont
 from syntax.highlight import js
+from syntax.tools.syntaxmaker import clearnyToList
 
 class TextWidget(Text):
     def __init__(self, *args, **kwargs):
         self.callback = kwargs.pop("autocomplete", None)
         Text.__init__(self, *args, **kwargs)
+        self.matchs = []
+        for i in js:
+            if clearnyToList(js[i]['regex']):
+                for j in clearnyToList(js[i]['regex']):
+                    self.matchs.append(j)
 
         self._orig = 'customtext' + "_orig"
         self.tk.call("rename", self._w, self._orig)
@@ -38,7 +44,7 @@ class TextWidget(Text):
 
         text.tag_remove("keyword", "1.0", "end")
 
-        if word in js['MATCHES']:
+        if word in self.matchs:
             text.mark_set("keyword_start", keyword_start)
             text.mark_set("keyword_end", keyword_end)
             text.tag_add("keyword", keyword_start, keyword_end)

@@ -112,6 +112,6 @@ class App(tk.Tk):
         except: pass
         
     def getmatches(self, word):
-        words = js['MATCHES']
+        words = self.editorTextarea.matchs
         matches = [x for x in words if x.startswith(word)]
         return matches

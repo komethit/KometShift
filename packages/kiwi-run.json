@@ -1,0 +1,13 @@
+{
+    "manifest": "kiwi",
+    "version": "^23.19.01 ! PRIVATE TEST, ONLY MACOS !",
+    "description": "Assistant compiler of the Kiwi language, also its highlighting and help.",
+    "author": "KometInc",
+    "state": false,
+    "components": {
+        "debug": {
+            "auto-interpretator": false,
+            "hand-interpretator": "python3 /Users/mak/Desktop/KometShift/packages/extensions/kiwi/compiler.py"
+        }
+    }
+}

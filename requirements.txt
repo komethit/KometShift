@@ -1,3 +1,5 @@
 tkterminal==0.1.0
 autopep8==2.0.1
 wikipedia==1.4.0
+Pillow==9.3.0
+pyinstaller==5.7.0
